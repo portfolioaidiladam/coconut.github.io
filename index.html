@@ -218,7 +218,7 @@
         // tampilkan tombol loading, hilangkan tombol kirim
         btnLoading.classList.toggle('d-none');
         btnKirim.classList.toggle('d-none');
-        Promise.all([fetch(scriptURLEmail, { method: 'POST' }), fetch(scriptURL, { method: 'POST', body: new FormData(form) })])
+        Promise.all([fetch(scriptURLEmail, { method: 'POST', body: new FormData(form) }), fetch(scriptURL, { method: 'POST', body: new FormData(form) })])
           .then((response) => {
             // tampilkan tombol kirim, hilangkan tombol loading
             btnLoading.classList.toggle('d-none');
